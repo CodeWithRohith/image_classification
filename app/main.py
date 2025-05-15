@@ -7,3 +7,7 @@ app = FastAPI(title="Trash Classifier API")
 async def classify_image(file: UploadFile = File(...)):
     result = await predict_trash(file)
     return result
+
+@app.get("test")
+async def testing():
+    return 'Welcome to FastAPI'
