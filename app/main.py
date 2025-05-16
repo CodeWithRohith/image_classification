@@ -8,6 +8,6 @@ async def classify_image(file: UploadFile = File(...)):
     result = await predict_trash(file)
     return result
 
-@app.get("test")
+@app.get("/test")
 async def testing():
     return 'Welcome to FastAPI'
